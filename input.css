@@ -1,0 +1,272 @@
+body {
+  background: lightgrey;
+  margin: 0;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+  -ms-grid-columns: 4, 1f;
+      grid-template-columns: 4, 1f;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "main-title main-title main-title main-title" "about about about about" "quote quote quote quote" "job-exp job-exp job-exp skills" "education education extracurricular extracurricular";
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+header nav {
+  background-color: #af2bcf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+
+#main-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: main-title;
+  text-align: center;
+}
+
+#about {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: about;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#about #about__photo {
+  max-width: 200px;
+  height: auto;
+}
+
+#about #about__text-cnt {
+  background-color: white;
+  padding: 50px;
+}
+
+#quote {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: quote;
+  background-color: #710080;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+
+#quote #quote__cite {
+  font-size: 1.5em;
+}
+
+#job-exp {
+  background-color: #ececec;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: job-exp;
+  padding: 20px;
+}
+
+#job-exp #job-exp__experience {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6, 1fr;
+      grid-template-columns: 6, 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10PX;
+      grid-template-areas: "job1 job1 job2 job2 job3 job3" "job4 job4 job4 job5 job5 job5";
+}
+
+#job-exp #job-exp__experience .job-exp__jobs {
+  border-radius: 10px;
+  background-color: #ddaffc;
+  padding: 10px;
+}
+
+#job-exp #job-exp__experience .job-exp__jobs .job-exp__company-logo {
+  max-height: 100px;
+  width: auto;
+}
+
+#job-exp #job-exp__experience #job-exp__job1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: job1;
+  text-align: center;
+}
+
+#job-exp #job-exp__experience #job-exp__job2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: job2;
+  text-align: center;
+}
+
+#job-exp #job-exp__experience #job-exp__job3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-area: job3;
+  text-align: center;
+}
+
+#job-exp #job-exp__experience #job-exp__job4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: job4;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#job-exp #job-exp__experience #job-exp__job5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: job5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#skills {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: skills;
+  background-color: white;
+  padding: 20px;
+}
+
+#education {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: education;
+  background-color: white;
+  padding: 20px;
+}
+
+#extracurricular {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: extracurricular;
+  background-color: #ddaffc;
+  padding: 20px;
+}
+
+footer {
+  background-color: #3e3e3e;
+  color: lightgrey;
+  padding: 10px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer #footer__social-medias .footer__social-medias_icons {
+  max-width: 40px;
+  height: auto;
+}
+
+footer #footer__email-phone p {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  main {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "main-title" "about" "quote" "job-exp" "skills" "education" "extracurricular";
+  }
+  #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #about #about__photo {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  #about #about__text-cnt {
+    padding: 20px;
+  }
+  #education {
+    padding: 20px;
+  }
+  #job-exp #job-exp__experience {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "job1" "job2" "job3" "job4" "job5";
+  }
+  #job-exp #job-exp__experience #job-exp__job1, #job-exp #job-exp__experience #job-exp__job2, #job-exp #job-exp__experience #job-exp__job3 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #job-exp #job-exp__experience #job-exp__job4, #job-exp #job-exp__experience #job-exp__job5 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+}
+/*# sourceMappingURL=input.css.map */
